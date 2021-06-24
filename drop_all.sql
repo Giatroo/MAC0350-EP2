@@ -1,0 +1,14 @@
+drop table ep2.usuario;
+drop table ep2.virus;
+drop table ep2.usuario;
+drop table ep2.tutor;
+drop table ep2.tutorando;
+drop table ep2.servico;
+drop table ep2.resultados_exame;
+drop table ep2.exame;
+drop table ep2.paciente;
+drop table ep2.perfil;
+drop table ep2.executa;
+drop table ep2.area_de_pesquisa;
+drop table ep2.possui;
+drop table ep2.permite;

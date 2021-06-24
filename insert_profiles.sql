@@ -1,4 +1,4 @@
-INSERT INTO servico VALUES
+INSERT INTO ep2.servico VALUES
 	(0, 'Esse serviço tem como função inserir exame', 'Inserir Exame'),
 	(1, 'Esse serviço tem como função inserir paciente', 'Inserir Paciente'),
 	(2, 'Esse serviço tem como função inserir usuário', 'Inserir Usuário'),
@@ -27,3 +27,5 @@ INSERT INTO servico VALUES
 	(25, 'Esse serviço tem como função alterar perfil', 'Alterar Perfil'),
 	(26, 'Esse serviço tem como função alterar virus', 'Alterar Virus'),
 	(27, 'Esse serviço tem como função alterar tutorando', 'Alterar Tutorando');
+
+select * from ep2.servico;

@@ -63,4 +63,25 @@ def gera_virus():
        ret_str += f"\t('{nome}', '{material}'),\n"
    return ret_str
 
-print(gera_virus())
+def gera_exames(n=10):
+    ret_str = 'INSERT INTO ep2.exame VALUES\n'
+    for i in range(n):
+        ret_str += f"\t({i},'{random.choice(resultado_exames)}','{random.choice(nome_virus)}'),\n"
+    return ret_str
+
+
+def gera_paciente():
+    cpf = random_cpf()
+    nome = random.choice(nomes)
+    endereco = random_endereco()
+    nascimento = random_data()
+    return f"('{cpf}', '{nome}', '{endereco}', '{nascimento}')"
+
+
+def gera_pacientes(n=10):
+    ret_str = 'INSERT INTO ep2.paciente VALUES\n'
+    for _ in range(n):
+        ret_str += f"\t{gera_paciente()},\n"
+    return ret_str
+
+print(gera_pacientes())

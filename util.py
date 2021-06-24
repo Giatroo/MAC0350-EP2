@@ -4,6 +4,8 @@ nomes = ['Lucas', 'Miguel', 'Ana', 'Camila', 'Eliana', 'Roberto', 'Marina',
 
 nome_virus = ['COVID-19', 'Dengue', 'H1N1', 'Ebola', 'Sars', 'Mars', 'Zika']
 
+tipo_material = ['PCR', 'Anticorpos']
+
 nome_instuicao = ['USP', 'UFMG', 'PUC', 'UNICAMP', 'UNESP', 'Mackenzie',
                   'UFRJ', 'UFABC', 'ITA', 'Unifesp']
 

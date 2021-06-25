@@ -1,5 +1,4 @@
 INSERT INTO ep2.permite VALUES
-    (codigo_perfil, codigo_servico)
     -- User
     (0, 13), -- Visualizar exame 
     (0, 17), -- Visualizar amostra 

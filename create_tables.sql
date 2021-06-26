@@ -44,10 +44,12 @@ create table ep2.tutorando (
 
 create table ep2.executa (
 	login varchar(40),
-	codigo int,
+	codigo_perfil int,
+    codigo_servico int,
 	horario timestamp not null,
 	foreign key (login) references ep2.usuario(login),
-	foreign key (codigo) references ep2.servico(codigo)
+	foreign key (codigo_perfil) references ep2.perfil(codigo)
+	foreign key (codigo_servico) references ep2.servico(codigo)
 );
 
 create table ep2.permite (

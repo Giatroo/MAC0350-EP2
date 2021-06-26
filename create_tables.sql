@@ -72,6 +72,7 @@ create table ep2.virus (
 
 create table ep2.exame (
 	codigo int,
+    tipo varchar(40),
 	resultado varchar(40),
 	nome_virus varchar(40),
     data_solicitacao date,

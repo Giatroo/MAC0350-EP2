@@ -34,7 +34,8 @@ order by login asc, tipo_perfil asc, tipo_servico asc;
 -- query 4
 select
 	ep2.servico.tipo,
-	count(ep2.servico.tipo)
+	count(ep2.servico.tipo) as total_utilizado
 from ep2.executa
 join ep2.servico on ep2.executa.codigo = ep2.servico.codigo
-group by ep2.servico.tipo;
+group by ep2.servico.tipo
+order by total_utilizado asc;

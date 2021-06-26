@@ -74,6 +74,8 @@ create table ep2.exame (
 	codigo int,
 	resultado varchar(40),
 	nome_virus varchar(40),
+    data_solicitacao date,
+    data_conclusao date,
 	primary key (codigo),
 	foreign key (nome_virus) references ep2.virus(nome_cientifico)
 );

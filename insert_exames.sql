@@ -1,16 +1,16 @@
 INSERT INTO ep2.exame VALUES
-	(0,'Infecção grave','COVID-19'),
-	(1,'Infecção grave','COVID-19'),
-	(2,'Infectado','Mers'),
-	(3,'Infectado','COVID-19'),
-	(4,'Positivo','Sars'),
-	(5,'Infecção grave','Sars'),
-	(6,'Inconclusivo','Mers'),
-	(7,'Infecção Leve','Dengue'),
-	(8,'Positivo','H1N1'),
-	(9,'Inconclusivo','Sars'),
-	(10,'Positivo','COVID-19'),
-	(11,'Negativo','H1N1');
+	(0,'Infecção grave','COVID-19', '2020-11-18', '2020-11-31'),
+	(1,'Infecção grave','COVID-19', '2020-11-19', '2020-11-31'),
+	(2,'Infectado','Mers', '2020-11-19', '2020-11-31'),
+	(3,'Infectado','COVID-19', '2020-11-19', '2020-11-31'),
+	(4,'Positivo','Sars', '2020-11-20', '2020-11-31'),
+	(5,'Infecção grave','Sars', '2020-11-21', '2020-12-01'),
+	(6,'Inconclusivo','Mers', '2020-11-21', '2020-12-01'),
+	(7,'Infecção Leve','Dengue', '2020-11-21', '2020-12-01'),
+	(8,'Positivo','H1N1', '2020-11-22', '2020-12-02'),
+	(9,'Inconclusivo','Sars', '2020-11-23', '2020-12-02'),
+	(10,'Positivo','COVID-19', '2020-11-23', '2020-12-03'),
+	(11,'Negativo','H1N1', '2020-11-23', '2020-12-03');
 
 select * from ep2.exame;
 

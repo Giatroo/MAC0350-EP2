@@ -341,46 +341,46 @@ INSERT INTO virus VALUES
 -- Consultas
 -- 1: Liste todos os exames realizados, com seus respectivos tipos, bem como
 -- seus usuários com suas respectivas datas de solicitação e de execução.
-select ep2.exame.codigo, ep2.exame.tipo, ep2.exame.nome_virus,
-ep2.paciente.nome, ep2.exame.data_solicitacao, ep2.exame.data_conclusao
-from ep2.exame
-join ep2.amostra on ep2.amostra.codigo_exame = ep2.exame.codigo
-join ep2.paciente on ep2.paciente.cpf = ep2.amostra.cpf;
+select exame.codigo, exame.tipo, exame.nome_virus,
+paciente.nome, exame.data_solicitacao, exame.data_conclusao
+from exame
+join amostra on amostra.codigo_exame = exame.codigo
+join paciente on paciente.cpf = amostra.cpf;
 
 -- 2: Liste os 5 exames realizados com maior eficiência (diferença entre data
 -- de execução e data de solicitação).
-select ep2.exame.codigo, ep2.exame.nome_virus, ep2.exame.resultado,
-(ep2.exame.data_conclusao - ep2.exame.data_solicitacao) as eficiencia
-from ep2.exame
+select exame.codigo, exame.nome_virus, exame.resultado,
+(exame.data_conclusao - exame.data_solicitacao) as eficiencia
+from exame
 order by eficiencia asc
 limit 5;
 
 -- 3: Liste os serviços que podem ser utilizados por usuários tutelados para
 -- cada usuário tutor.
 select
-	ep2.tutor.login,
+	tutor.login,
 	tipo_perfil,
 	tipo_servico
-from ep2.possui
-join ep2.tutor on ep2.possui.identificacao = ep2.tutor.identificacao
+from possui
+join tutor on possui.identificacao = tutor.identificacao
 join (
 	select
-		ep2.perfil.tipo as tipo_perfil,
-		ep2.servico.tipo as tipo_servico,
-		ep2.permite.codigo_perfil
-	from ep2.permite
-	join ep2.perfil on ep2.permite.codigo_perfil = ep2.perfil.codigo
-	join ep2.servico on ep2.permite.codigo_servico = ep2.servico.codigo
-) as juntado on ep2.possui.codigo = juntado.codigo_perfil
+		perfil.tipo as tipo_perfil,
+		servico.tipo as tipo_servico,
+		permite.codigo_perfil
+	from permite
+	join perfil on permite.codigo_perfil = perfil.codigo
+	join servico on permite.codigo_servico = servico.codigo
+) as juntado on possui.codigo = juntado.codigo_perfil
 order by login asc, tipo_perfil asc, tipo_servico asc;
 
 -- 4: Liste em ordem crescente o total de serviços utilizados agrupados pelos
 -- tipos de serviços disponíveis e pelo perfil dos usuários.
 select
-	ep2.perfil.tipo, ep2.servico.tipo,
+	perfil.tipo, servico.tipo,
 	count(*)
-from ep2.executa
-join ep2.servico on ep2.executa.codigo_servico = ep2.servico.codigo
-join ep2.perfil on ep2.executa.codigo_perfil = ep2.perfil.codigo
-group by ep2.perfil.tipo, ep2.servico.tipo
+from executa
+join servico on executa.codigo_servico = servico.codigo
+join perfil on executa.codigo_perfil = perfil.codigo
+group by perfil.tipo, servico.tipo
 order by count(*) asc;

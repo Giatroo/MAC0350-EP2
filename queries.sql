@@ -1,5 +1,5 @@
 -- query 1
-select ep2.exame.codigo, ep2.amostra.tipo_material, ep2.exame.nome_virus,
+select ep2.exame.codigo, ep2.exame.tipo, ep2.exame.nome_virus,
 ep2.paciente.nome, ep2.exame.data_solicitacao, ep2.exame.data_conclusao
 from ep2.exame
 join ep2.amostra on ep2.amostra.codigo_exame = ep2.exame.codigo
@@ -9,7 +9,7 @@ join ep2.paciente on ep2.paciente.cpf = ep2.amostra.cpf;
 select ep2.exame.codigo, ep2.exame.nome_virus, ep2.exame.resultado,
 (ep2.exame.data_conclusao - ep2.exame.data_solicitacao) as eficiencia
 from ep2.exame
-order by eficiencia desc
+order by eficiencia asc
 limit 5;
 
 -- query 3
@@ -30,12 +30,12 @@ join (
 ) as juntado on ep2.possui.codigo = juntado.codigo_perfil
 order by login asc, tipo_perfil asc, tipo_servico asc;
 
-
 -- query 4
 select
-	ep2.servico.tipo,
-	count(ep2.servico.tipo) as total_utilizado
+	ep2.perfil.tipo, ep2.servico.tipo,
+	count(*)
 from ep2.executa
-join ep2.servico on ep2.executa.codigo = ep2.servico.codigo
-group by ep2.servico.tipo
-order by total_utilizado asc;
+join ep2.servico on ep2.executa.codigo_servico = ep2.servico.codigo
+join ep2.perfil on ep2.executa.codigo_perfil = ep2.perfil.codigo
+group by ep2.perfil.tipo, ep2.servico.tipo
+order by count(*) asc;

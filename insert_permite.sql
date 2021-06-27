@@ -1,7 +1,7 @@
 INSERT INTO ep2.permite VALUES
     -- User
-    (0, 13), -- Visualizar exame 
-    (0, 17), -- Visualizar amostra 
+    (0, 14), -- Visualizar exame
+    (0, 17), -- Visualizar amostra
     -- Admin
     (1, 0),
     (1, 1),

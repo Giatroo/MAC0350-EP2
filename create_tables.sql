@@ -48,7 +48,7 @@ create table ep2.executa (
     codigo_servico int,
 	horario timestamp not null,
 	foreign key (login) references ep2.usuario(login),
-	foreign key (codigo_perfil) references ep2.perfil(codigo)
+	foreign key (codigo_perfil) references ep2.perfil(codigo),
 	foreign key (codigo_servico) references ep2.servico(codigo)
 );
 
@@ -107,10 +107,4 @@ create table ep2.area_de_pesquisa (
 	area varchar(30),
 	login varchar(40),
 	foreign key (login) references ep2.usuario(login)
-);
-
-create table ep2.resultados_exame (
-	resultados varchar(120),
-	codigo int,
-	foreign key(codigo) references ep2.exame(codigo)
 );

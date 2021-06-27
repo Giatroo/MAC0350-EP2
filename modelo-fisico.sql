@@ -115,17 +115,26 @@ create table area_de_pesquisa (
 );
 
 -- Inserção de dados
-INSERT INTO area_de_pesquisa VALUES
-    ('Biomedicina',   'usuario31'),
-    ('Biomedicina',   'convidado13'),
-    ('Infectologia',  'xX_demon_slayer_42_Xx'),
-    ('Microbiologia', 'junin123'),
-    ('Biomedicina',   'usuario13'),
-    ('Infectologia',  'convidado11'),
-    ('Biomedicina',   '_darksorcer333_'),
-    ('Viralogia',     'arch_user_10'),
-    ('Infectologia',  'vim_user'),
-    ('Infectologia',  'emacs_user');
+INSERT INTO virus VALUES
+	('COVID-19', 'UGUAGUCAGGAGGAGCGGGCGGCUGGUAUAGAAGGCCAGCACUAGUUAGAUACUCAGUGCAGUAGCCACGGACUGAUUGUUAUUGGGAGUUAUAUCGGAU'),
+	('Dengue', 'GGGACCACGGUUUAUCCACAUCCGGUGGAUAACGUGGGCGGAUUAGUCUGUUGUGCGACAGCAACGAUAGAGAUAGUUAACCACAUCAUCGUAUAUGCGG'),
+	('H1N1', 'CGCGUUUGCUGACAGUGAAAAGUUAUCCGUAGAAGUAUACGGAAUAGGGCGCGUUAAACCUAUUUGAAUGAUCCCGCGUCACUCUCUCCAUCUCAAUUCU'),
+	('Ebola', 'TCGTGCACATTCGGATACATGGGGCATAGTAGGAGGCCAAGCCTCGTAACCCTGTGCGATGAAGTGTTTTGTTTCCAGGTGACGAAGATCCTCGCGTCAG'),
+	('Sars', 'GUUCAUGAGAAGAAUUUUAAUAAAAUUGUAUCAGAUCUAUCGGGCGACCUUCGGGCUGGACAUUUCCAUAUCCACCCAGGGAAAACAAUGAAAGACACCC'),
+	('Mers', 'UAAAUUGUCCACACUCGUGAAAUAAGCCUGGGUCGGCUGUAGUGAGCUAGGUAAAAGAACGCAUCCGGAAAUGAAUGUAGUUACCCCGAUGUGAGCCAAU'),
+	('Zika', 'GGCCAGACAAUCACGAAACCGCAUUCCGCCCGGUUUUAACACGCUAGAAUUGGAAACCUAAGUCGUCCUGAAACUCUAGGAGGGAAGGGUAGUGAUGCCC');
+
+INSERT INTO paciente VALUES
+	('705.613.249-37', 'Marcos', 'Rua Perimetral, número 437, São Paulo, Brasil', '1978-10-03'),
+	('964.692.851-60', 'Luciano', 'Rua Perimetral, número 865, ap 78, São Paulo, Brasil', '1973-10-28'),
+	('821.190.813-19', 'Miguel', 'Rua do Matão, número 939, ap 89, São Paulo, Brasil', '1974-12-02'),
+	('189.416.953-24', 'Gabriela', 'Rua do Matão, número 522, ap 13, São Paulo, Brasil', '1953-08-15'),
+	('826.210.614-11', 'Elisabeti', 'Rua Perimetral, número 299, São Paulo, Brasil', '1950-10-17'),
+	('500.068.688-78', 'Ana', 'Rua Luis Pinto Flaquer, número 276, São Paulo, Brasil', '1966-03-13'),
+	('184.635.099-44', 'Gabriela', 'Rua América, número 762, ap 43, São Paulo, Brasil', '1962-03-30'),
+	('611.463.077-14', 'Eduardo', 'Rua Dom Pedro, número 557, ap 89, São Paulo, Brasil', '1955-07-18'),
+	('410.469.301-50', 'Davi', 'Rua Luis Pinto Flaquer, número 904, ap 60, São Paulo, Brasil', '1992-09-11'),
+	('362.061.009-31', 'Caique', 'Rua Luis Pinto Flaquer, número 542, São Paulo, Brasil', '1987-08-17');
 
 INSERT INTO exame VALUES
 	(0, 'PCR', 'Infecção grave','COVID-19', '2020-11-18', '2020-11-30'),
@@ -158,33 +167,6 @@ INSERT INTO amostra VALUES
 	(13, 10, '705.613.249-37', '2020-11-25', 'Sangue'),
 	(14, 11, '611.463.077-14', '2020-11-24', 'Secreção das vias aéreas');
 
-INSERT INTO executa VALUES
-    ('usuario31' ,   1,  0, '2021-03-08 12:05:06'),
-    ('convidado13',  3, 14, '2021-03-08 13:08:46'),
-    ('usuario31',    1, 24, '2021-03-08 14:00:03'),
-    ('junin123',     3, 14, '2021-03-08 14:03:06'),
-    ('junin123',     3, 14, '2021-03-08 14:59:59'),
-    ('junin123',     3,  6, '2021-03-08 15:05:03'),
-    ('junin123',     3,  6, '2021-03-08 15:13:16'),
-    ('vim_user',     3, 14, '2021-03-08 15:15:36'),
-    ('emacs_user',   1,  4, '2021-03-08 17:45:54'),
-    ('vim_user',     3, 14, '2021-03-08 17:52:23'),
-    ('emacs_user',   1,  3, '2021-04-08 13:01:34'),
-	('arch_user_10', 4,  1, '2021-04-08 15:32:21'),
-	('arch_user_10', 4,  3, '2021-04-08 15:35:54');
-
-INSERT INTO paciente VALUES
-	('705.613.249-37', 'Marcos', 'Rua Perimetral, número 437, São Paulo, Brasil', '1978-10-03'),
-	('964.692.851-60', 'Luciano', 'Rua Perimetral, número 865, ap 78, São Paulo, Brasil', '1973-10-28'),
-	('821.190.813-19', 'Miguel', 'Rua do Matão, número 939, ap 89, São Paulo, Brasil', '1974-12-02'),
-	('189.416.953-24', 'Gabriela', 'Rua do Matão, número 522, ap 13, São Paulo, Brasil', '1953-08-15'),
-	('826.210.614-11', 'Elisabeti', 'Rua Perimetral, número 299, São Paulo, Brasil', '1950-10-17'),
-	('500.068.688-78', 'Ana', 'Rua Luis Pinto Flaquer, número 276, São Paulo, Brasil', '1966-03-13'),
-	('184.635.099-44', 'Gabriela', 'Rua América, número 762, ap 43, São Paulo, Brasil', '1962-03-30'),
-	('611.463.077-14', 'Eduardo', 'Rua Dom Pedro, número 557, ap 89, São Paulo, Brasil', '1955-07-18'),
-	('410.469.301-50', 'Davi', 'Rua Luis Pinto Flaquer, número 904, ap 60, São Paulo, Brasil', '1992-09-11'),
-	('362.061.009-31', 'Caique', 'Rua Luis Pinto Flaquer, número 542, São Paulo, Brasil', '1987-08-17');
-
 INSERT INTO perfil VALUES
 	(0, 'user'),
 	(1, 'admin'),
@@ -192,6 +174,36 @@ INSERT INTO perfil VALUES
 	(3, 'pesquisador'),
 	(4, 'funcionario'),
 	(5, 'convidado');
+
+INSERT INTO servico VALUES
+	( 0, 'Esse serviço tem como função inserir exame',        'Inserir Exame'),
+	( 1, 'Esse serviço tem como função inserir paciente',     'Inserir Paciente'),
+	( 2, 'Esse serviço tem como função inserir usuário',      'Inserir Usuário'),
+	( 3, 'Esse serviço tem como função inserir amostra',      'Inserir Amostra'),
+	( 4, 'Esse serviço tem como função inserir perfil',       'Inserir Perfil'),
+	( 5, 'Esse serviço tem como função inserir virus',        'Inserir Virus'),
+	( 6, 'Esse serviço tem como função inserir tutorando',    'Inserir Tutorando'),
+	( 7, 'Esse serviço tem como função remover exame',        'Remover Exame'),
+	( 8, 'Esse serviço tem como função remover paciente',     'Remover Paciente'),
+	( 9, 'Esse serviço tem como função remover usuário',      'Remover Usuário'),
+	(10, 'Esse serviço tem como função remover amostra',      'Remover Amostra'),
+	(11, 'Esse serviço tem como função remover perfil',       'Remover Perfil'),
+	(12, 'Esse serviço tem como função remover virus',        'Remover Virus'),
+	(13, 'Esse serviço tem como função remover tutorando',    'Remover Tutorando'),
+	(14, 'Esse serviço tem como função visualizar exame',     'Visualizar Exame'),
+	(15, 'Esse serviço tem como função visualizar paciente',  'Visualizar Paciente'),
+	(16, 'Esse serviço tem como função visualizar usuário',   'Visualizar Usuário'),
+	(17, 'Esse serviço tem como função visualizar amostra',   'Visualizar Amostra'),
+	(18, 'Esse serviço tem como função visualizar perfil',    'Visualizar Perfil'),
+	(19, 'Esse serviço tem como função visualizar virus',     'Visualizar Virus'),
+	(20, 'Esse serviço tem como função visualizar tutorando', 'Visualizar Tutorando'),
+	(21, 'Esse serviço tem como função alterar exame',        'Alterar Exame'),
+	(22, 'Esse serviço tem como função alterar paciente',     'Alterar Paciente'),
+	(23, 'Esse serviço tem como função alterar usuário',      'Alterar Usuário'),
+	(24, 'Esse serviço tem como função alterar amostra',      'Alterar Amostra'),
+	(25, 'Esse serviço tem como função alterar perfil',       'Alterar Perfil'),
+	(26, 'Esse serviço tem como função alterar virus',        'Alterar Virus'),
+	(27, 'Esse serviço tem como função alterar tutorando',    'Alterar Tutorando');
 
 INSERT INTO permite VALUES
     -- User
@@ -250,73 +262,6 @@ INSERT INTO permite VALUES
     -- Convidado
     -- Não tem permissão para nada
 
-INSERT INTO possui VALUES
-    (0, 1),
-    (1, 3),
-    (2, 5),
-    (3, 3),
-    (3, 4),
-    (4, 2),
-    (4, 4),
-    (5, 1);
-
-INSERT INTO servico VALUES
-	( 0, 'Esse serviço tem como função inserir exame',        'Inserir Exame'),
-	( 1, 'Esse serviço tem como função inserir paciente',     'Inserir Paciente'),
-	( 2, 'Esse serviço tem como função inserir usuário',      'Inserir Usuário'),
-	( 3, 'Esse serviço tem como função inserir amostra',      'Inserir Amostra'),
-	( 4, 'Esse serviço tem como função inserir perfil',       'Inserir Perfil'),
-	( 5, 'Esse serviço tem como função inserir virus',        'Inserir Virus'),
-	( 6, 'Esse serviço tem como função inserir tutorando',    'Inserir Tutorando'),
-	( 7, 'Esse serviço tem como função remover exame',        'Remover Exame'),
-	( 8, 'Esse serviço tem como função remover paciente',     'Remover Paciente'),
-	( 9, 'Esse serviço tem como função remover usuário',      'Remover Usuário'),
-	(10, 'Esse serviço tem como função remover amostra',      'Remover Amostra'),
-	(11, 'Esse serviço tem como função remover perfil',       'Remover Perfil'),
-	(12, 'Esse serviço tem como função remover virus',        'Remover Virus'),
-	(13, 'Esse serviço tem como função remover tutorando',    'Remover Tutorando'),
-	(14, 'Esse serviço tem como função visualizar exame',     'Visualizar Exame'),
-	(15, 'Esse serviço tem como função visualizar paciente',  'Visualizar Paciente'),
-	(16, 'Esse serviço tem como função visualizar usuário',   'Visualizar Usuário'),
-	(17, 'Esse serviço tem como função visualizar amostra',   'Visualizar Amostra'),
-	(18, 'Esse serviço tem como função visualizar perfil',    'Visualizar Perfil'),
-	(19, 'Esse serviço tem como função visualizar virus',     'Visualizar Virus'),
-	(20, 'Esse serviço tem como função visualizar tutorando', 'Visualizar Tutorando'),
-	(21, 'Esse serviço tem como função alterar exame',        'Alterar Exame'),
-	(22, 'Esse serviço tem como função alterar paciente',     'Alterar Paciente'),
-	(23, 'Esse serviço tem como função alterar usuário',      'Alterar Usuário'),
-	(24, 'Esse serviço tem como função alterar amostra',      'Alterar Amostra'),
-	(25, 'Esse serviço tem como função alterar perfil',       'Alterar Perfil'),
-	(26, 'Esse serviço tem como função alterar virus',        'Alterar Virus'),
-	(27, 'Esse serviço tem como função alterar tutorando',    'Alterar Tutorando');
-
-INSERT INTO tutorando VALUES
-  (0, 3, '_darksorcer333_', 4, 0),
-  (0, 3, '_darksorcer333_', 4, 1),
-  (0, 3, '_darksorcer333_', 4, 21),
-  (1, 3, 'arch_user_10', 4, 0),
-  (1, 3, 'arch_user_10', 4, 3),
-  (1, 3, 'arch_user_10', 4, 1),
-  (1, 3, 'arch_user_10', 4, 21),
-  (2, 4, 'vim_user', 3, 14),
-  (2, 4, 'vim_user', 3, 16),
-  (2, 4, 'vim_user', 3, 17),
-  (2, 4, 'vim_user', 3, 19),
-  (3, 5, 'emacs_user', 1, 0),
-  (3, 5, 'emacs_user', 1, 1),
-  (3, 5, 'emacs_user', 1, 2),
-  (3, 5, 'emacs_user', 1, 3),
-  (3, 5, 'emacs_user', 1, 4),
-  (3, 5, 'emacs_user', 1, 5);
-
-INSERT INTO tutor VALUES
-	(0, 'usuario31'), 
-	(1, 'convidado13'),
-	(2, 'xX_demon_slayer_42_Xx'),
-	(3, 'junin123'), 
-	(4, 'usuario13'),
-	(5, 'convidado11');
-
 INSERT INTO usuario VALUES
 	('usuario31', 'Eduardo', '211.740.814-27', 'O8zHuCY4?SyR.', '1957-02-18', 'Unifesp', 'Rua Perimetral, número 952, ap 86, São Paulo, Brasil'),
 	('convidado13', 'Lucas', '605.320.257-84', '#kMP9JhdD7Ord', '1998-01-24', 'UFABC', 'Rua América, número 97, ap 38, São Paulo, Brasil'),
@@ -329,14 +274,69 @@ INSERT INTO usuario VALUES
 	('vim_user', 'Eliana', '253.218.271-60', 'e..OLetxUaH', '1977-01-17', 'UNESP', 'Rua do Matão, número 832, São Paulo, Brasil'),
 	('emacs_user', 'Marcos', '932.418.754-79', 'MxYJ@G4TnMTqfb!K', '1999-05-05', 'PUC', 'Rua América, número 753, ap 73, São Paulo, Brasil');
 
-INSERT INTO virus VALUES
-	('COVID-19', 'UGUAGUCAGGAGGAGCGGGCGGCUGGUAUAGAAGGCCAGCACUAGUUAGAUACUCAGUGCAGUAGCCACGGACUGAUUGUUAUUGGGAGUUAUAUCGGAU'),
-	('Dengue', 'GGGACCACGGUUUAUCCACAUCCGGUGGAUAACGUGGGCGGAUUAGUCUGUUGUGCGACAGCAACGAUAGAGAUAGUUAACCACAUCAUCGUAUAUGCGG'),
-	('H1N1', 'CGCGUUUGCUGACAGUGAAAAGUUAUCCGUAGAAGUAUACGGAAUAGGGCGCGUUAAACCUAUUUGAAUGAUCCCGCGUCACUCUCUCCAUCUCAAUUCU'),
-	('Ebola', 'TCGTGCACATTCGGATACATGGGGCATAGTAGGAGGCCAAGCCTCGTAACCCTGTGCGATGAAGTGTTTTGTTTCCAGGTGACGAAGATCCTCGCGTCAG'),
-	('Sars', 'GUUCAUGAGAAGAAUUUUAAUAAAAUUGUAUCAGAUCUAUCGGGCGACCUUCGGGCUGGACAUUUCCAUAUCCACCCAGGGAAAACAAUGAAAGACACCC'),
-	('Mers', 'UAAAUUGUCCACACUCGUGAAAUAAGCCUGGGUCGGCUGUAGUGAGCUAGGUAAAAGAACGCAUCCGGAAAUGAAUGUAGUUACCCCGAUGUGAGCCAAU'),
-	('Zika', 'GGCCAGACAAUCACGAAACCGCAUUCCGCCCGGUUUUAACACGCUAGAAUUGGAAACCUAAGUCGUCCUGAAACUCUAGGAGGGAAGGGUAGUGAUGCCC');
+INSERT INTO tutor VALUES
+	(0, 'usuario31'), 
+	(1, 'convidado13'),
+	(2, 'xX_demon_slayer_42_Xx'),
+	(3, 'junin123'), 
+	(4, 'usuario13'),
+	(5, 'convidado11');
+
+INSERT INTO possui VALUES
+    (0, 1),
+    (1, 3),
+    (2, 5),
+    (3, 3),
+    (3, 4),
+    (4, 2),
+    (4, 4),
+    (5, 1);
+
+INSERT INTO tutorando VALUES
+  (0, 3, '_darksorcer333_', 4, 0),
+  (1, 3, '_darksorcer333_', 4, 1),
+  (2, 3, '_darksorcer333_', 4, 21),
+  (3, 3, 'arch_user_10', 4, 0),
+  (4, 3, 'arch_user_10', 4, 3),
+  (5, 3, 'arch_user_10', 4, 1),
+  (6, 3, 'arch_user_10', 4, 21),
+  (7, 4, 'vim_user', 3, 14),
+  (8, 4, 'vim_user', 3, 16),
+  (9, 4, 'vim_user', 3, 17),
+  (10, 4, 'vim_user', 3, 19),
+  (11, 5, 'emacs_user', 1, 0),
+  (12, 5, 'emacs_user', 1, 1),
+  (13, 5, 'emacs_user', 1, 2),
+  (14, 5, 'emacs_user', 1, 3),
+  (15, 5, 'emacs_user', 1, 4),
+  (16, 5, 'emacs_user', 1, 5);
+
+INSERT INTO area_de_pesquisa VALUES
+    ('Biomedicina',   'usuario31'),
+    ('Biomedicina',   'convidado13'),
+    ('Infectologia',  'xX_demon_slayer_42_Xx'),
+    ('Microbiologia', 'junin123'),
+    ('Biomedicina',   'usuario13'),
+    ('Infectologia',  'convidado11'),
+    ('Biomedicina',   '_darksorcer333_'),
+    ('Viralogia',     'arch_user_10'),
+    ('Infectologia',  'vim_user'),
+    ('Infectologia',  'emacs_user');
+
+INSERT INTO executa VALUES
+    ('usuario31' ,   1,  0, '2021-03-08 12:05:06'),
+    ('convidado13',  3, 14, '2021-03-08 13:08:46'),
+    ('usuario31',    1, 24, '2021-03-08 14:00:03'),
+    ('junin123',     3, 14, '2021-03-08 14:03:06'),
+    ('junin123',     3, 14, '2021-03-08 14:59:59'),
+    ('junin123',     3,  6, '2021-03-08 15:05:03'),
+    ('junin123',     3,  6, '2021-03-08 15:13:16'),
+    ('vim_user',     3, 14, '2021-03-08 15:15:36'),
+    ('emacs_user',   1,  4, '2021-03-08 17:45:54'),
+    ('vim_user',     3, 14, '2021-03-08 17:52:23'),
+    ('emacs_user',   1,  3, '2021-04-08 13:01:34'),
+	('arch_user_10', 4,  1, '2021-04-08 15:32:21'),
+	('arch_user_10', 4,  3, '2021-04-08 15:35:54');
 
 -- Consultas
 -- 1: Liste todos os exames realizados, com seus respectivos tipos, bem como
